@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# Done: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -148,6 +148,16 @@ def problem5(seq_of_seq):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    list = []
+    for k in range (len(seq_of_seq)):
+        sub = seq_of_seq[k]
+        if len(sub) > 0:
+            largest = sub[0]
+            for j in range (1, len(sub)):
+                if sub[j] > largest:
+                    largest = sub[j]
+            list = list + [largest]
+    return list
 
 
 ###############################################################################
