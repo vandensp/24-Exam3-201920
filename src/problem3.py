@@ -188,7 +188,7 @@ def problem3(sequence):
 
     prime = 0
     for k in range (len(sequence)):
-        if is_prime(sequence[k]) == True:
+        if is_prime(sequence[k]):
             sequence[k] = sequence[k] + 3
             prime = prime + 1
     return prime
