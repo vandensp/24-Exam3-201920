@@ -144,6 +144,11 @@ def problem1(n):
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
 
+    fibo = [0, 1]
+    while n > fibo[len(fibo) - 1]:
+        fibo = fibo + [fibo[len(fibo) - 1] + fibo[len(fibo) - 2]]
+    return fibo[len(fibo) - 2]
+
 def print_expected_result_of_test(arguments, expected,
                                   test_results, format_string):
     testing_helper.print_expected_result_of_test(arguments, expected,
