@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# Done: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -272,7 +272,7 @@ def problem4(seq_of_seq, n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -281,6 +281,12 @@ def problem4(seq_of_seq, n):
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
+    for k in range (len(seq_of_seq)):
+        sub = seq_of_seq[k]
+        for j in range (len(sub)):
+            if sub[j] > n and is_prime(sub[j]) == True:
+                return sub[j]
+    return -1
 
 def print_expected_result_of_test(arguments, expected,
                                   test_results, format_string):
